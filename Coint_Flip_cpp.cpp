@@ -46,8 +46,8 @@ _________        .__         ___________
 	game:
 	flipCoin(whatnub);
 	cout << endl;
-	cout << "There were "<< times <<" flips"<< endl;
-	cout << "Countiniue? (1.Yes 2.No)" << endl;
+	cout << "There were " << times << " flips with " << whatcoint << endl;
+	cout << "Continue? (1.Yes 2.No)" << endl;
 	cin >> t;
 	if (t == 1) goto start; else goto ending;
 	ending:
@@ -57,9 +57,9 @@ _________        .__         ___________
 void flipCoin(bool what){
 	int flip;
 	times = 0;
+	srand(time(NULL));
 	if (what == true) {
 	do {
-		srand(time(NULL));
 		flip = rand() % 2 + 1;
 		if (flip == 1){
 			cout << "H ";
@@ -73,7 +73,6 @@ void flipCoin(bool what){
 	}
 	else {
 	do {
-		srand(time(NULL));
 		flip = rand() % 2 + 1;
 		if (flip == 1){
 			cout << "H ";
