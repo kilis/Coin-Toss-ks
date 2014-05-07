@@ -8,7 +8,6 @@
 #include <string>
 using namespace std;
 void flipCoin(bool what);
-int times;
 int _tmain(int argc, _TCHAR* argv[])
 {
 	int t,t1;
@@ -56,6 +55,7 @@ _________        .__         ___________
 }
 void flipCoin(bool what){
 	int flip;
+	int* times;
 	times = 0;
 	srand(time(NULL));
 	if (what == true) {
@@ -63,11 +63,11 @@ void flipCoin(bool what){
 		flip = rand() % 2 + 1;
 		if (flip == 1){
 			cout << "H ";
-			times++;
+			times*++;
 		}
 		else if (flip == 2) {
 			cout << "T ";
-			times++;
+			times*++;
 		}
 	} while (flip <= 1);
 	}
@@ -76,12 +76,13 @@ void flipCoin(bool what){
 		flip = rand() % 2 + 1;
 		if (flip == 1){
 			cout << "H ";
-			times++;
+			times*++;
 		}
 		else if (flip == 2) {
 			cout << "T ";
-			times++;
+			times*++;
 		}
 	} while (flip >= 2);
+	return times*;
 	}
 }
